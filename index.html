@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js" integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="icon" type="image/x-icon" href="./logoImages/file-person.svg">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./footer.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+ 
+  <title>Home Page</title>
+
+
+  <style>
+    body{
+        background-color: #333;
+        /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOP9DlwOB0CCJnDCWgoXgfjryjwT8K96fxJg&usqp=CAU'); */
+    }
+    .navbar {
+      background-color: #333;
+    }
+
+    .navbar a {
+      color: white;
+    }
+
+    .navbar a:hover {
+      color: lightgray;
+    }
+
+    .top-header {
+      /* background-color: #333; */
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .profile-image {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      transition: transform 0.5s ease-in-out;
+      
+    }
+
+
+    @keyframes spin {
+      0% {
+        transform: rotateY(0);
+      }
+      100% {
+        transform: rotateY(365deg);
+      }
+    }
+    .profile-image:hover{
+        transform: rotate(360deg);
+    
+    }
+    .navbar-brand img{
+        height: 90px;
+        width: 90px;
+        border: none;
+        border-radius: 50%;
+        object-fit: cover;
+        /* transition: transform 0.5s ease-in-out; */
+        animation: spin 3s linear infinite;
+    }
+
+    .navbar-brand img:hover{
+        animation: none;
+    }
+    .about-section {
+      /* background-color: #f8f9fa; */
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .about-image {
+      max-width: 300px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .about-text {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #333;
+    }
+     .about-section {
+      /* background-image; */
+      background-color: transparent;
+      color: grey;
+      padding: 50px 0;
+      text-align: center;
+      opacity: 0; /* Initially set to transparent */
+      transform: translateX(-100px); /* Initially positioned to the left */
+      transition: opacity 0.5s ease, transform 0.5s ease; /* Adding transitions */
+    }
+
+    .about-image {
+      max-width: 135px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    .about-text {
+      font-size: 18px;
+      line-height: 1.6;
+      color: whitesmoke
+    }
+
+    /* Add a class to trigger the animation when scrolled into view */
+    .about-animate {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    /* footer */
+    .footer {
+      /* background-color: #333; */
+      color: white;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .social-icons a {
+      color: white;
+      font-size: 24px;
+      margin: 0 10px;
+      transition: color 0.3s ease;
+    }
+
+    .social-icons a:hover {
+      color: #1abc9c;
+    }
+
+    .mail-icon {
+      font-size: 30px;
+      margin-top: 20px;
+    }
+
+    .mail-icon:hover {
+      color: #e74c3c;
+    }
+
+    .down-button {
+      background-color: #1abc9c;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 18px;
+      cursor: pointer;
+      float: right;
+      text-decoration: none;
+    }
+
+    .down-icon {
+      margin-left: 10px;
+    }
+    /* body{
+        background-image: url(./images/charlesdeluvio-Lks7vei-eAg-unsplash.jpg);
+    } */
+  </style>
+</head>
+<body>
+ <div class="container-fluid">
+    <!-- <div class="row"> -->
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <div class="container">
+              <a target="_blank"  class="navbar-brand" href="#"><img src="https://s77.com.au/wp-content/uploads/2020/07/Screen-Shot-2020-07-17-at-8.32.58-PM.jpg" alt=""></a>
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                  
+                  <li class="nav-item">
+                    <a target="_blank"  class="nav-link" href="./index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a target="_blank"  class="nav-link" href="./index.html">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a target="_blank"  class="nav-link" href="./skill.html">Skills</a>
+                  </li>
+                  <li target="_blank"  class="nav-item">
+                    <a target="_blank"  class="nav-link" href="./project.html">Projects</a>
+                  <li class="nav-item">
+                    <a target="_blank"  class="nav-link" href="./Contact.html">Contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+    <!-- </div> -->
+    
+    <!-- <div class="row"> -->
+
+          
+        <div class="top-header">
+            <img src="./images/photo_1_2023-10-09_12-09-00.jpg" alt="Profile Image" class="profile-image">
+            <h1>Sakib Ali Mir</h1>
+            <p>Technical Security Engineer</p>
+           
+              <i class="fas fa-arrow-down down-icon"></i>
+            </a>
+      </div>
+    <!-- </div> -->
+
+    <div class="container">
+        <div class="about-section" id="about-section">
+          <img  style="border-radius: 50%; height: 40%;" src="./images/photo_3_2023-10-09_12-09-00.jpg" alt="Profile Image" class="about-image">
+          <h2>About Me</h2>
+          <p class="about-text">
+            I am an accomplished Technical Support Engineer with two years of experience in the field. My journey in the tech industry began after completing my graduation at Amar Singh College. Eager to dive into the world of networking, I pursued and successfully obtained both CCNA and CCNP certifications, which opened doors to the exciting realm of networking.
+
+            My career took a significant leap when I joined Capgemini as a Cisco TAC Engineer. At Capgemini, I handled a wide spectrum of cases, ranging from L1 to L3, collaborating with international clients. During my tenure, I had the honor of being recognized as a prominent engineer, achieving the 2nd rank at a ceremony in Bangalore. This recognition further fueled my passion for technology and customer support.
+            
+            One of my notable accomplishments at Capgemini was my deep dive into Nexus switch technology, a prominent and critical aspect of modern networking. My dedication to learning and adapting to the latest technologies has been a constant theme throughout my career.
+            
+            Currently, I am a part of the dedicated team at Almuqeet Systems, where I serve as an L2 NOC Support Engineer, specializing in server support. My role involves ensuring the seamless operation of critical servers and providing top-notch support to our clients.
+            
+            Beyond my role as an engineer, I have cultivated a diverse range of interests and skills. I have delved into Customer Relationship Management (CRM), honed my calligraphy skills, and developed a passion for cricket and football. These pursuits have enriched my life and complemented my technical expertise.
+            
+            In the ever-evolving world of technology, I remain committed to continuous learning and staying at the forefront of innovation. My journey as a Technical Support Engineer has been marked by dedication, excellence, and a genuine passion for helping clients navigate the complexities of the digital landscape.I belive in future to reach the ranges of l3 in cloud tac support which is my dream and chasing for it.
+          </p>
+        </div>
+      </div>
+      
+ <!-- footer  -->
+ <footer class="main-footer">
+  <div class="container">
+      <div class="footer-content">
+          <div class="row">
+              <div class="col-lg-4 col-md-6 col-sm-12 footer-column">
+                  <div class="logo-widget footer-widget">
+                      <figure class="logo-box"><a href="#"><img src="./images/photo_2023-10-06_16-49-11.jpg" alt=""></a></figure>
+                      <div class="text">
+                          <p>Fortifying systems, code, and data from cyber threats,
+                            Technical Security Engineer, your shield in the digital duels we face.
+                            With expertise and vigilance, we keep your assets safe and sound,
+                            In the ever-evolving world of tech, trust us to stand our ground.</p>
+                      </div>
+                       <ul class="footer-social">
+                        <li><a target="_blank" href="http://facebook.com/in/saqibalimir"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a target="_blank" href="http://twitter.com/in/saqibali"><i class="fab fa-twitter"></i></a></li>
+                        <li><a target="_blank" href="http://github.com/saqib7ali"><i class="fab fa-git"></i></a></li>
+                        <li><a target="_blank" href="http://linkedin.com/in/saqibalimir"><i class="fab fa-linkedin-in"></i></a></li>
+                      </ul>
+                    
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12 offset-lg-2 footer-column">
+                  <div class="service-widget footer-widget">
+                      <div class="footer-title">Services</div>
+                      <ul class="list">
+                        <li><a target="_blank"  href="#">Firewall</a></li>
+                        <li><a target="_blank"  href="#">MentorpShip</a></li>
+                        <li><a target="_blank"  href="#">Security</a></li>
+                        <li><a target="_blank"  href="#">CRM</a></li>
+                        <li><a target="_blank"  href="#">Cyber Security</a></li>
+                    </ul>
+                  </div>
+              </div>
+              <div class="col-lg-3 col-md-6 col-sm-12 footer-widget">
+                  <div class="contact-widget footer-widget">
+                      <div class="footer-title">Contacts</div>
+                      <div class="text">
+                          <p>AlMuqeet Systems,Sidco, srinagar kashmir </p>
+                          <p>+91 7889708373</p>
+                          <p>sakibalimir8@gmail.com</p>
+                          <p>saqib@almuqeet.systems</p>
+                          
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</footer>
+<!-- main-footer end -->
+<div class="footer-bottom">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-6 col-md-6 col-sm-12 column">
+              <div class="copyright"><a href="#">Sakib</a> &copy; 2023 All Right Reserved</div>
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-12 column">
+              <ul class="footer-nav">
+                  <li><a href="#">Terms of Service</a></li>
+                  <li><a href="#">Privacy Policy</a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+
+  <!-- Content for different pages goes here -->
+
+  <!-- Scripts -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+
+     window.addEventListener("scroll", function() {
+      var aboutSection = document.querySelector(".about-section");
+      var aboutPosition = aboutSection.getBoundingClientRect().top;
+      var screenHeight = window.innerHeight;
+
+      if (aboutPosition < screenHeight) {
+        aboutSection.classList.add("about-animate");
+      }
+    });
+
+
+    // scroll button 
+    $(document).ready(function() {
+        $(".down-button").click(function(){
+            $(".navbar-brand").scrollTop();
+            
+        })
+       
+      $(".down-button").click(function(event) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: $("#about-section").offset().top }, 800);
+       })
+      })
+     </script>
+  </body>
+</html>
